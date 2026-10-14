@@ -128,4 +128,27 @@
         }
 
 
+        const claimFilter = document.getElementById("claim-filter");
+
+        if (claimFilter) {
+            const catCards = document.querySelectorAll(".cat-card");
+
+            claimFilter.addEventListener("change", function () {
+                const selectedStatus = claimFilter.value;
+
+                catCards.forEach(function (card) {
+                    const claimStatus = card.dataset.claim;
+
+                    if (
+                        selectedStatus === "all" ||
+                        claimStatus === selectedStatus
+                    ) {
+                        card.hidden = false;
+                    } else {
+                        card.hidden = true;
+                    }
+                });
+            });
+        }
+
 

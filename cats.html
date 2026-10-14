@@ -39,54 +39,72 @@
 
 
 
-<main class="cat-cards">
+<main class="cat-page">
 
-    <div class="cat-card">
-        <button class="cat-link profile-toggle"
-                aria-expanded="false"
-                aria-controls="rainstar-profile">
-
-        <div class="cat-portrait">
-            <img src="img/cats/rainstarhstransp.png" alt="RainStar">
-        </div>
-
-        <div class="cat-name">
-            <h3>RainStar</h3>
-        </div>
-
-        </button>
+    <!-- Claim Status Sorter -->
+    <div class="cat-sorter">
+        <label for="claim-filter">Claim Status:</label>
+        <select id="claim-filter">
+            <option value="all">All Cats</option>
+            <option value="claimed">Claimed</option>
+            <option value="unclaimed">Unclaimed</option>
+        </select>
     </div>
 
-    <div class="cat-card">
-        <button class="cat-link profile-toggle"
-                aria-expanded="false"
-                aria-controls="shadebloom-profile">
+    <!-- Cat Gallery -->
+    <div class="cat-gallery">
 
-        <div class="cat-portrait">
-            <img src="img/cats/shadebloomhs.png" alt="ShadeBloom">
+        <!-- RainStar -->
+        <div class="cat-card" data-claim="claimed">
+            <button class="cat-link profile-toggle"
+                    aria-expanded="false"
+                    aria-controls="rainstar-profile">
+
+                <div class="cat-portrait">
+                    <img src="img/cats/rainstarhstransp.png" alt="RainStar">
+                </div>
+
+                <div class="cat-name">
+                    <h3>RainStar</h3>
+                </div>
+
+            </button>
         </div>
 
-        <div class="cat-name">
-            <h3>ShadeBloom</h3>
+        <!-- ShadeBloom -->
+        <div class="cat-card" data-claim="unclaimed">
+            <button class="cat-link profile-toggle"
+                    aria-expanded="false"
+                    aria-controls="shadebloom-profile">
+
+                <div class="cat-portrait">
+                    <img src="img/cats/shadebloomhs.png" alt="ShadeBloom">
+                </div>
+
+                <div class="cat-name">
+                    <h3>ShadeBloom</h3>
+                </div>
+
+            </button>
         </div>
 
-        </button>
-    </div>
+        <!-- IcePuddle -->
+        <div class="cat-card" data-claim="unclaimed">
+            <button class="cat-link profile-toggle"
+                    aria-expanded="false"
+                    aria-controls="icepuddle-profile">
 
-    <div class="cat-card">
-        <button class="cat-link profile-toggle"
-                aria-expanded="false"
-                aria-controls="icepuddle-profile">
+                <div class="cat-portrait">
+                    <img src="img/cats/icepuddlehs.png" alt="IcePuddle">
+                </div>
 
-        <div class="cat-portrait">
-            <img src="img/cats/icepuddlehs.png" alt="IcePuddle">
+                <div class="cat-name">
+                    <h3>IcePuddle</h3>
+                </div>
+
+            </button>
         </div>
 
-        <div class="cat-name">
-            <h3>IcePuddle</h3>
-        </div>
-
-        </button>
     </div>
 
 </main>
