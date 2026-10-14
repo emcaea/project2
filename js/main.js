@@ -78,54 +78,52 @@
     
     
 
-        const applicationForm = document.getElementById("clan-application");
-        const applicationPopup = document.getElementById("application-popup");
-        const popupMessage = document.getElementById("popup-message");
-        const popupClose = document.getElementById("popup-close");
-        const popupConfirm = document.getElementById("popup-confirm");
+        
+const applicationForm = document.getElementById("clan-application");
+const applicationPopup = document.getElementById("application-popup");
+const popupMessage = document.getElementById("popup-message");
+const popupClose = document.getElementById("popup-close");
+const popupConfirm = document.getElementById("popup-confirm");
 
-        if (applicationForm && applicationPopup) {
-        applicationForm.addEventListener("submit", function(event) {
-            event.preventDefault();
+if (applicationForm && applicationPopup && popupMessage && popupClose && popupConfirm) {
+    applicationForm.addEventListener("submit", function(event) {
+        event.preventDefault();
 
-            const applicantName = document
-            .getElementById("applicant-name")
-            .value.trim();
+        const applicantNameField = document.getElementById("applicant-name");
+        const applicantName = applicantNameField
+            ? applicantNameField.value.trim()
+            : "";
 
-            if (!applicantName) {
-            return;
-            }
+        popupMessage.textContent = applicantName
+            ? "Thank you for applying, " + applicantName + "! You've been added to the waitlist!"
+            : "Thank you for applying!";
 
-            popupMessage.textContent =
-            "Thank you for applying, " + applicantName +
-            "! You've been added to the waitlist!";
+        applicationForm.hidden = true;
+        applicationPopup.hidden = false;
 
-            // Hide the form and show the pop-up
-            applicationForm.hidden = true;
-            applicationPopup.hidden = false;
+        popupClose.focus();
+    });
 
-            popupClose.focus();
-        });
+    function closeApplicationPopup() {
+        applicationPopup.hidden = true;
+    }
 
-        function closeApplicationPopup() {
-            applicationPopup.hidden = true;
-        }
+    popupClose.addEventListener("click", closeApplicationPopup);
+    popupConfirm.addEventListener("click", closeApplicationPopup);
 
-        popupClose.addEventListener("click", closeApplicationPopup);
-        popupConfirm.addEventListener("click", closeApplicationPopup);
-
-        applicationPopup.addEventListener("click", function(event) {
-            if (event.target === applicationPopup) {
+    applicationPopup.addEventListener("click", function(event) {
+        if (event.target === applicationPopup) {
             closeApplicationPopup();
-            }
-        });
-
-        document.addEventListener("keydown", function(event) {
-            if (event.key === "Escape" && !applicationPopup.hidden) {
-            closeApplicationPopup();
-            }
-        });
         }
+    });
+
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape" && !applicationPopup.hidden) {
+            closeApplicationPopup();
+        }
+    });
+}
+
 
 
         const claimFilter = document.getElementById("claim-filter");
