@@ -152,3 +152,17 @@
         }
 
 
+    
+
+        const profileParams = new URLSearchParams(window.location.search);
+        const requestedProfile = profileParams.get("profile");
+
+        if (requestedProfile) {
+            const profileButton = document.querySelector(
+                `[aria-controls="${requestedProfile}"]`
+            );
+
+            if (profileButton) {
+                profileButton.click();
+            }
+        }
