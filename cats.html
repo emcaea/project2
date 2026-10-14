@@ -1,34 +1,165 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>Introduction to Rainclan Cats</title>
-  <meta name="description" content="For my portfolio.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>RainClan</title>
+    <meta name="description" content="Explore the world, cats, history, and stories of RainClan.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="icon" type="image/x-icon" href="img/p2favicon.png">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/x-icon" href="img/p2favicon.png">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
 
-  <meta name="theme-color" content="#fafafa">
+    <meta name="theme-color" content="#14251e">
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
-
-<header>
-  <a href="index.html">RainClan</a>
-
-  <nav>
-    <a href="cats.html">Character Finder</a>
-    <a href="shortstories.html">Short Stories</a>
-  </nav>
-</header>
 
 <body>
 
-  <p>Booooooo</p>
+    <header>
+        <div class="hero-header small-header">
+        <img src="img/mistforestbg.jpg" alt="RainClan forest">
+        <div class="hero-title">
+        <h1>RainClan Cats</h1>
+        </div>
+        </div>
 
-  <script src="/js/main.js"></script>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="cats.html">Character Finder</a>
+            <a href="shortstories.html">Short Stories</a>
+            <a href="moons.html">Clan History</a>
+        </nav>
+    </header>
+
+
+
+<main class="cat-cards">
+
+    <div class="cat-card">
+        <button class="cat-link profile-toggle"
+                aria-expanded="false"
+                aria-controls="rainstar-profile">
+
+        <div class="cat-portrait">
+            <img src="img/cats/rainstarhstransp.png" alt="RainStar">
+        </div>
+
+        <div class="cat-name">
+            <h3>RainStar</h3>
+        </div>
+
+        </button>
+    </div>
+
+    <div class="cat-card">
+        <button class="cat-link profile-toggle"
+                aria-expanded="false"
+                aria-controls="shadebloom-profile">
+
+        <div class="cat-portrait">
+            <img src="img/cats/shadebloomhs.png" alt="ShadeBloom">
+        </div>
+
+        <div class="cat-name">
+            <h3>ShadeBloom</h3>
+        </div>
+
+        </button>
+    </div>
+
+    <div class="cat-card">
+        <button class="cat-link profile-toggle"
+                aria-expanded="false"
+                aria-controls="icepuddle-profile">
+
+        <div class="cat-portrait">
+            <img src="img/cats/icepuddlehs.png" alt="IcePuddle">
+        </div>
+
+        <div class="cat-name">
+            <h3>IcePuddle</h3>
+        </div>
+
+        </button>
+    </div>
+
+</main>
+
+
+<!-- RainStar's profile -->
+        <div class="profile-overlay" id="rainstar-overlay" hidden>
+    <section class="character-profile" id="rainstar-profile">
+        <button class="close-profile" aria-label="Close profile">&times;</button>
+
+        <h2>RainStar</h2>
+        <img src="img/cats/rainstarhstransp.png" alt="RainStar">
+
+        <p><strong>Rank:</strong> Leader</p>
+
+        <h3>Appearance</h3>
+        <p>Describe RainStar's appearance here.</p>
+
+        <h3>Personality</h3>
+        <p>Describe RainStar's personality here.</p>
+
+        <h3>History</h3>
+        <p>Write RainStar's history here.</p>
+    </section>
+    </div>
+
+<!-- ShadeBloom's profile -->
+        <div class="profile-overlay" id="shadebloom-overlay" hidden>
+    <section class="character-profile" id="shadebloom-profile">
+        <button class="close-profile" aria-label="Close profile">&times;</button>
+
+        <h2>ShadeBloom</h2>
+        <img src="img/cats/shadebloomhs.png" alt="ShadeBloom">
+
+        <p><strong>Rank:</strong> Leader</p>
+
+        <h3>Appearance</h3>
+        <p>Describe ShadeBloom's appearance here.</p>
+
+        <h3>Personality</h3>
+        <p>Describe ShadeBloom's personality here.</p>
+
+        <h3>History</h3>
+        <p>Write ShadeBloom's history here.</p>
+    </section>
+    </div>
+
+
+<!-- IcePuddle's profile -->
+        <div class="profile-overlay" id="icepuddle-overlay" hidden>
+    <section class="character-profile" id="icepuddle-profile">
+        <button class="close-profile" aria-label="Close profile">&times;</button>
+
+        <h2>IcePuddle</h2>
+        <img src="img/cats/icepuddlehs.png" alt="IcePuddle">
+
+        <p><strong>Rank:</strong> Leader</p>
+
+        <h3>Appearance</h3>
+        <p>Describe IcePuddle's appearance here.</p>
+
+        <h3>Personality</h3>
+        <p>Describe IcePuddle's personality here.</p>
+
+        <h3>History</h3>
+        <p>Write IcePuddle's history here.</p>
+    </section>
+    </div>
+
+<script src="js/main.js"></script>
+```
+
+    <script src="js/main.js"></script>
+
 </body>
-
 </html>

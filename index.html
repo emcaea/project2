@@ -13,6 +13,10 @@
 
   <meta name="theme-color" content="#fafafa">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
 </head>
 
 <header>
@@ -26,14 +30,181 @@
   <a href="index.html">RainClan</a>
 
   <nav>
+    <a href="index.html">Home</a>
     <a href="cats.html">Character Finder</a>
     <a href="shortstories.html">Short Stories</a>
+    <a href="moons.html">Clan History</a>
   </nav>
 </header>
 
 <body>
 
-  <p>Booooooo</p>
+  <main
+
+    <section>
+        <h2>Explore RainClan</h2>
+
+        <div class="columns">
+            <div class="column">
+                <h3>Who is Who</h3>
+                <p>It's easy to get lost in the world of Rainclan, when you don't know who is who refer here!</p>
+                <a href="cats.html">Meet the Cats</a>
+            </div>
+
+            <div class="column">
+                <h3>Clan History</h3>
+                <p>What happened before the current events in RainClan's timeline, and how did the clan evolve?</p>
+                <a href="moons.html">Read the History</a>
+            </div>
+
+            <div class="column">
+                <h3>Short Stories</h3>
+                <p>Read stories about the lives of individual RainClan's cats.</p>
+                <a href="shortstories.html">Read Stories</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section">
+    <div class="about-text">
+        <h2>About RainClan</h2>
+        <p>
+            RainClan has struggled for moons with war, sickness, and in-fighting; only after many losses and pain, they’ve finally entered an era of peace. The war with CloudClan now settled and illnesses now just a forgotten memory; the leader, RainStar, and her clanmembers will do whatever they can to maintain their hard-earned rest. Only, they’ll have to learn to live with the grief left over from the past. Can they recover? Will their peace survive their harsh environment?
+        </p>
+        <p>
+            Explore the cats, discover their stories, and learn
+            about the territory they call home.
+        </p>
+    </div>
+
+    <div class="about-image">
+        <img src="img/rainclanmap.png" alt="The map of Rainclan">
+
+        <div class="image-text">
+            <p>RainClan's Territory Map</p>
+        </div>
+    </div>
+</section>
+
+
+    <section class="application-section" id="join-rainclan">
+      <h2>Join RainClan</h2>
+
+      <p class="application-intro">
+        Applications are first come first serve, feel free to check <a href="cats.html">here</a> for available cats.
+      </p>
+
+      <form class="application-form" id="clan-application">
+        <div class="form-group">
+          <label for="applicant-name">Your Discord Username</label>
+          <input
+            type="text"
+            id="applicant-name"
+            name="applicant-name"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="cat-name">Rainclan Cat's Name</label>
+          <input
+            type="text"
+            id="cat-name"
+            name="cat-name"
+            placeholder="e.g. RainStar"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="cat-rank">Desired Rank</label>
+          <select id="cat-rank" name="cat-rank" required>
+            <option value="">Choose a rank</option>
+            <option value="kit">Kit</option>
+            <option value="apprentice">Apprentice</option>
+            <option value="warrior">Warrior</option>
+            <option value="medicine-cat">Medicine Cat</option>
+            <option value="elder">Elder</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="cat-personality">Personality</label>
+          <textarea
+            id="cat-personality"
+            name="cat-personality"
+            rows="3"
+            placeholder="Optional: Describe your cat's personality..."
+            optional
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="cat-appearance">Appearance</label>
+          <textarea
+            id="cat-appearance"
+            name="cat-appearance"
+            rows="3"
+            placeholder="Would you like to keep or change your cat's appearance? If so, describe it here..."
+            optional
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="cat-backstory">Backstory</label>
+          <textarea
+            id="cat-backstory"
+            name="cat-backstory"
+            rows="5"
+            placeholder="Optional: Tell us your cat's story..."
+            optional
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="application-reason">
+            Why do you want to join RainClan?
+          </label>
+          <textarea
+            id="application-reason"
+            name="application-reason"
+            rows="3"
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" class="application-submit">
+          Submit Application
+        </button>
+
+        <p id="application-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+
+  </main>
+
+
+  <div class="popup-overlay" id="application-popup" hidden>
+    <div class="popup-box" role="dialog" aria-modal="true"
+        aria-labelledby="popup-title">
+      <button type="button" class="popup-close"
+              id="popup-close" aria-label="Close pop-up">
+        &times;
+      </button>
+
+      <h2 id="popup-title">Application Received!</h2>
+
+      <p id="popup-message">
+        Thank you for applying! You've been added to the waitlist!
+      </p>
+
+      <button type="button" class="popup-confirm" id="popup-confirm">
+        Return to RainClan
+      </button>
+    </div>
+  </div>
+
 
   <script src="/js/main.js"></script>
 </body>
